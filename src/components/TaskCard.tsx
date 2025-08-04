@@ -3,8 +3,8 @@ interface props {
   title: string;
   description: string;
   isDone: boolean;
-  deleteTaskFunc: (taskId: string) => void; // callback function
-  toggleDoneTaskFunc: (taskId: string) => void; // callback function
+  deleteTaskFunc: (id: string) => void; // callback function
+  toggleDoneTaskFunc: (id: string) => void; // callback function
 }
 
 export default function TaskCard({

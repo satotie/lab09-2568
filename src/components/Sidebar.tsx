@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import {
   BsBox2HeartFill,
   BsPlusCircleFill,
@@ -6,6 +5,7 @@ import {
   BsEmojiSunglassesFill,
 } from "react-icons/bs";
 import { type SidebarProps } from "../libs/Sidebar";
+import { Link } from "react-router";
 
 export default function Sidebar({ userName, type }: SidebarProps) {
   return (
@@ -19,7 +19,8 @@ export default function Sidebar({ userName, type }: SidebarProps) {
           <h3 className="navbar-brand">Note App</h3>
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to={"/"}>
+              
+              <Link className="nav-link active" to="/">
                 <BsPlusCircleFill />
                 <span className="d-md-inline px-2">CounterPage</span>
               </Link>
@@ -34,15 +35,15 @@ export default function Sidebar({ userName, type }: SidebarProps) {
                 <BsBox2HeartFill />
                 <span className="d-md-inline px-2">MY Stuffs</span>
               </a>
-              <ul className="dropdown-menu">
+              <ul className="dropdown-menu p-2">
                 <li>
-                  <Link className="dropdown-item" to={"/my/hellomynamepage"}>
+                  <Link className="nav-link active" to ="/my/hellomynamepage">
                     <BsEmojiSunglassesFill />
                     <span className="d-md-inline px-2">HelloMyNamePage</span>
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to={"/my/todolistpage"}>
+                  <Link className="nav-link active" to="/my/todolistpage">
                     <BsCalendarCheckFill />
                     <span className="d-md-inline px-2">TodolistPage</span>
                   </Link>
